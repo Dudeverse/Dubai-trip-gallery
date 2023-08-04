@@ -1,12 +1,20 @@
-// Replace these URLs with your own image URLs
+// Add images here
 const imageUrls = [
+    "images/ALSEEF1.jpeg",
+    "images/MALL2.jpeg",
     "images/ALSEEF2.jpeg",
+    "images/MALL1.jpeg",
+    "images/LOCALSHOP.jpeg",
+    "images/ALSEEF3.jpeg",
+    "images/DUBAIMALL3.jpeg",
+    "images/WATER_TAXI_2.jpeg",
+    "images/ALFAHIDI.jpeg",
     "images/BURJ1.jpeg",
     "images/KUNAFA.jpeg",
-    // Add more image URLs as needed
+    "images/NABLUS.jpeg",
 ];
 
-  // Function to create gallery images dynamically
+// function for adding images dynamically
 function createGalleryImages() {
     const gallery = document.querySelector(".gallery");
     imageUrls.forEach((imageUrl) => {
@@ -17,14 +25,16 @@ function createGalleryImages() {
     gallery.appendChild(img);
     });
 }
+
+//function for animation effect
 function toggleImageAnimation(img) {
     if (!img.classList.contains("animate-image")) {
     img.classList.add("animate-image");
     img.addEventListener("animationend", () => {
         img.classList.remove("animate-image");
-      }, { once: true }); // Remove the event listener after the animation ends
+      }, { once: true }); 
     }
 }
 
-  // Create the gallery when the page loads
+// gallery appears after page load
 window.addEventListener("load", createGalleryImages);
